@@ -29,19 +29,19 @@ function calculateWinner(squares) {
 
 function TicTacToe() {
     // Состояния компонента
-    const [isLoading, setIsLoading] = useState(true); // Переменная для отображения индикатора загрузки
-    const [isGameStarted, setIsGameStarted] = useState(false); // Флаг, указывающий, начата ли игра
-    const [board, setBoard] = useState(Array(9).fill(null)); // Массив для хранения состояния игровой доски
-    const [xIsNext, setXIsNext] = useState(true); // Флаг, указывающий, чей ход (X или O)
-    const [winner, setWinner] = useState(null); // Победитель (X, O, или null в случае ничьи)
-    const [movesCount, setMovesCount] = useState(0); // Количество сделанных ходов
-    const [showWinnerPopup, setShowWinnerPopup] = useState(false); // Флаг, указывающий, показывать ли попап с результатом
+    const [isLoading, setIsLoading] = useState(true);
+    const [isGameStarted, setIsGameStarted] = useState(false);
+    const [board, setBoard] = useState(Array(9).fill(null));
+    const [xIsNext, setXIsNext] = useState(true);
+    const [winner, setWinner] = useState(null);
+    const [movesCount, setMovesCount] = useState(0);
+    const [showWinnerPopup, setShowWinnerPopup] = useState(false);
 
-    // Загрузка данных (моковая задержка в 2 секунды)
+    // Загрузка в 2 секунды
     useEffect(() => {
         const fetchData = async () => {
             setTimeout(() => {
-                setIsLoading(false); // Установка isLoading в false после загрузки
+                setIsLoading(false);
             }, 2000);
         };
 
